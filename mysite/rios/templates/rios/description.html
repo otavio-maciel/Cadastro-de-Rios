@@ -1,0 +1,20 @@
+{% extends 'rios/base.html' %}
+
+{% block content %}
+    <div class="river">
+        <!--{% if rivers.published_date %}
+            <div class="date">
+                {{ rivers.published_date }}
+            </div>
+        {% endif %}
+    -->
+        <h2>Nome: {{ river.name }}</h2>
+        <p><h4>Descrição: {{ river.description|linebreaksbr }} </h4></p>
+    </div>
+    <div class="Sensor">
+        <h2>Sensores:</h2>
+        {% for sensor in sensors %}
+        <h4> {{ sensor.sensor_name }}</h4>
+        {% endfor %}
+    </div>
+{% endblock %}

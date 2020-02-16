@@ -1,0 +1,16 @@
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<h2>Escolha Uma opção:</h2>   
+</head>
+<body>
+	<!-- <meta http-equiv="refresh" content="5;url="> Comando para atualizar a pagina a cada 5 segundos -->
+    {% for river in rivers %}
+    <div>
+        <p><h4><a href="{% url 'description' pk=river.pk %}">{{ river.name }}</a></h4></p>
+    </div>
+	{% endfor %}
+</body>
+</html>
+
