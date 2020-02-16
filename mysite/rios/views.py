@@ -21,7 +21,7 @@ def new_reading(request):
 		print('request received')
 		print(request.POST.get('device'))
 		print(request.POST.get('password'))
-		print(request.POST.get('id'))
+		print(request.POST.get('id')) 
 		print(request.POST.get('sensor_read'))
 		user = authenticate(username=request.POST.get('device'), password=request.POST.get('password'))
 		if user is not None:
